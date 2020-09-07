@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passoa com DOM</title>
+    <style>
+        .inicio{
+            width: 50%;
+            height: 20rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem;
+            border: .5rem solid #000000;
+        }
+        body{
+            background-color: #0000ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="inicio">
+      <h1>Estudos com <strong>DOM</strong></h1>
+      <p>Aqui vai o resultado</p>
+      <p>Aprendendo a usar o DOM</p>
+      <div id="msg">Clique em mim</div>
+    </div>
+    <script>
+       var corpo = window.document.body;
+       var p1 = window.document.getElementsByTagName('p')[1];
+       var d = window.document.querySelector('div#msg');
+      // var d = window.document.getElementById("msg");
+       corpo.style.backgroundColor = "#009980";
+       p1.style.color = "#ffffff";
+       window.alert(p1.innerText); //Pega os texto sem as modificaçoes.
+       window.document.write(p1.innerHTML); //Pega o texto como no HTML.
+       d.innerText = "Olá";
+    </script>
+</body>
+</html>
