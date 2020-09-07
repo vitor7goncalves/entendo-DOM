@@ -1,0 +1,1 @@
+Nesta aula estou aprendendo sobre DOM e como manipula-la.
